@@ -10,9 +10,9 @@ import streamlit_authenticator as stauth
 st.set_page_config(layout="wide", page_title="News Monitor App")
 
 # The connection string, database name, and collection name
-connection_string = "mongodb+srv://admin:Newsscraper123@newsscraper.lppvfjw.mongodb.net/"
-database_name = "NewsScrapper"
-collection_name = "Articles"
+connection_string = "mongodb+srv://" + st.secrets["DB_USERNAME"] + ":" + st.secrets["DB_PASSWORD"] + "@" + st.secrets["DB_CLUSTER"] + ".lppvfjw.mongodb.net/"
+database_name = st.secrets["DB_NAME"]
+collection_name = st.secrets["DB_COLLECTION"]
 
 # Create a MongoClient
 client = MongoClient(connection_string)
