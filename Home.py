@@ -5,7 +5,6 @@ from difflib import unified_diff
 from hashlib import sha256
 from difflib import ndiff
 import re
-import streamlit_authenticator as stauth
 
 st.set_page_config(layout="wide", page_title="News Monitor App")
 
